@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cacita Nuraeni - Siswa SMAN 10 Garut</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #f77e9d;
+            --secondary-color: #0a58ca;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8) !important;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: white !important;
+        }
+        
+        .hero-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 80px 0;
+            border-radius: 0 0 30px 30px;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .section-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .achievement-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .achievement-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .contact-form {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .skill-item {
+            margin-bottom: 15px;
+        }
+        
+        .skill-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .progress {
+            height: 10px;
+            border-radius: 5px;
+        }
+        
+        .progress-bar {
+            background-color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">IN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#beranda">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#prestasi">Prestasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="tr.jpg" alt="Profile" class="profile-img">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="display-4 fw-bold">Cacita Nuraeni</h1>
+                    <p class="lead">Siswa Kelas XII - 3 SMAN 10 Garut</p>
+                    <p>Saya adalah seorang siswa yang aktif dalam kegiatan akademik dan non-akademik. Saya memiliki minat di bidang sosiologi, teknologi, dan seni. Tujuan saya adalah menjadi seorang profesional yang dapat memberikan kontribusi positif bagi masyarakat.</p>
+                    <div class="mt-4">
+                        <a href="#prestasi" class="btn btn-light btn-lg me-3">Prestasi Saya</a>
+                        <a href="#kontak" class="btn btn-outline-light btn-lg">Hubungi Saya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Tentang Saya</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <p>Saya adalah Cacita Nuraeni, seorang siswa kelas XII-3 di SMAN 10 Garut. Saya aktif mengembangkan berbagai kemampuan di bidang akademik dan non-akademik. Saya percaya bahwa pendidikan yang seimbang antara ilmu pengetahuan dan pengembangan soft skills akan membentuk saya menjadi individu yang lengkap dan siap menghadapi tantangan masa depan.</p>
+                    <p>Selama di sekolah, saya selalu berusaha untuk mengambil bagian dalam berbagai kegiatan, mulai dari kompetisi akademik hingga kegiatan ekstrakurikuler yang dapat mengasah kemampuan kepemimpinan dan kerjasama tim.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="mb-3">Minat & Keahlian</h4>
+                    <div class="skill-item">
+                        <div class="skill-name">Matematika (Olimpiade & Kompetisi)</div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Fisika & Kimia</div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Debat Bahasa Inggris</div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Desain & Seni</div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Kepemimpinan</div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="prestasi" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Prestasi</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="achievement-card text-center">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>Juara 1 Olimpiade Matematika</h4>
+                        <p>Meraih juara pertama dalam kompetisi Olimpiade Matematika tingkat provinsi tahun 2023. Saya berhasil menyelesaikan semua soal dengan strategi efektif dan pemahaman konsep yang mendalam.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="achievement-card text-center">
+                        <div class="achievement-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h4>Science Fair Project</h4>
+                        <p>Mengembangkan proyek inovatif tentang energi terbarukan yang mendapat pengakuan dalam pameran sains tingkat nasional. Proyek ini fokus pada pemanfaatan limbah organik sebagai sumber energi alternatif.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="achievement-card text-center">
+                        <div class="achievement-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>Best Speaker Debate</h4>
+                        <p>Terpilih sebagai pembicara terbaik dalam kompetisi debat bahasa Inggris antar sekolah se-Jawa Barat. Kemampuan argumentasi dan presentasi saya dinilai paling persuasif dan terstruktur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Hubungi Saya</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="contact-form">
+                        <h4 class="mb-4">Mari berkolaborasi dan belajar bersama</h4>
+                        <form>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">Nama Depan</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Nama Belakang</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subjek</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Pesan</label>
+                                <textarea class="form-control" id="message" rows="4" required></textarea>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="terms">
+                                <label class="form-check-label" for="terms">Saya setuju dengan syarat dan ketentuan</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h4 class="mb-4">Info Kontak</h4>
+                        <div class="mb-3">
+                            <p><i class="fas fa-envelope me-2"></i> Email: cacitanuraeni18@student.sman10garut.sch.id</p>
+                        </div>
+                        <div class="mb-3">
+                            <p><i class="fas fa-phone me-2"></i> Telepon: +6283878939439</p>
+                        </div>
+                        <div class="mb-4">
+                            <p><i class="fas fa-school me-2"></i> Sekolah: SMAN 10 Garut, Jawa Barat</p>
+                        </div>
+                        <h5 class="mb-3">Ikuti Saya</h5>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2025 Cacita Nuraeni. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+        
+        // Update active nav link on scroll
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html
